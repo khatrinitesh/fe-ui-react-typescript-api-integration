@@ -18,7 +18,9 @@ const AboutPage = () => {
   if (error) return <div>Error loading products: {error.message}</div>;
   return (
     <div className="container">
-      <h1>About Page - Product List from FakeStore API</h1>
+      <h1 className="text-[28px] font-bold my-[20px]">
+        About Page - Product List from FakeStore API
+      </h1>
       <ul>
         {data?.map((product) => (
           <li key={product.id} style={{ marginBottom: "10px" }}>

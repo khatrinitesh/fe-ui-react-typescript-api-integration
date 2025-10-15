@@ -31,3 +31,14 @@ export interface Product {
 export interface ILayoutProps {
   children: ReactNode;
 }
+
+export interface ButtonProps {
+  isDisabled?: boolean;
+  isLoading?: boolean;
+  isEnabled?: boolean;
+  className?: string;
+  children: React.ReactNode;
+  iconBefore?: React.ReactNode;
+  iconAfter?: React.ReactNode;
+  onClick?: () => void;
+}

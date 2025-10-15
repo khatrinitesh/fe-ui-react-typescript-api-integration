@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Sling as Hamburger } from "hamburger-react";
+import { Rotate as Hamburger } from "hamburger-react";
 import { Link } from "react-router-dom";
 import { ROUTE_PATHS } from "../../routes/path";
 
@@ -9,8 +9,14 @@ const HamburgerMenu = () => {
   return (
     <div className="md:hidden">
       {/* Hamburger Button */}
-      <div className="fixed top-4 right-4 z-[60]">
-        <Hamburger toggled={isOpen} toggle={setOpen} size={20} color="#fff" />
+      <div className="fixed top-3 right-4 z-[60]">
+        <Hamburger
+          duration={0.8}
+          toggled={isOpen}
+          toggle={setOpen}
+          size={20}
+          color="#fff"
+        />
       </div>
 
       {isOpen && (

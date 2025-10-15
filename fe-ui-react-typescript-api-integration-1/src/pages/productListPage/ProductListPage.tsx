@@ -1,6 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { axiosInstance } from "../../api/axiosInstance";
 import type { Comment } from "../../interface";
+import { Link } from "react-router-dom";
 
 const fetchComments = async (): Promise<Comment[]> => {
   const { data } = await axiosInstance.get<Comment[]>("/comments");
@@ -30,7 +31,9 @@ const ProductListPage = () => {
       <ul>
         {data.slice(0, 10).map((comment) => (
           <li key={comment.id}>
-            <strong>{comment.name}</strong> - {comment.body}
+            <Link to={`/products/${comment.id}`}>
+              <strong>{comment.name}</strong> - {comment.body}
+            </Link>
           </li>
         ))}
       </ul>
