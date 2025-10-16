@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+.bodyWrapper,
+.rootWrapper {
+  height: 100dvh;
+  min-height: 100dvh;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
